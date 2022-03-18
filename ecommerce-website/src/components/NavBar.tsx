@@ -4,6 +4,7 @@ import { IRootReducerState } from "../store/reducers/rootReducer";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { deleteFromCart } from "../store/actions/cartAction";
 import { userloginDetails } from "../store/actions/Login";
+import logo from "../images/logo.png";
 
 const NavBar: React.FunctionComponent = () => {
   const { cartItems, totalPrice } = useSelector(
@@ -37,7 +38,9 @@ const NavBar: React.FunctionComponent = () => {
   return (
     <header className="bg-gray-200">
       <nav className="flex justify-between items-center p-4">
-        <div>Logo</div>
+        <div className="w-10 h-10">
+          <img src={logo} alt="logo" className="w-full h-full" />
+        </div>
         <ul className="flex gap-5">
           <li className="px-5 font-medium py-2 cursor-pointer">
             <NavLink
